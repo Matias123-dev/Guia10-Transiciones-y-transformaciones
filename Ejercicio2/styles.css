@@ -1,0 +1,40 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+  background: #f1f5f9;
+}
+
+.hamburguesa {
+  width: 60px;
+  height: 50px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  width: 100%;
+  height: 4px;
+  background: white;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburguesa.activo span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.hamburguesa.activo span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguesa.activo span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
